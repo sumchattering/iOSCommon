@@ -13,10 +13,6 @@ import FirebaseAnalytics
 
 class BaseViewController: UIViewController {
 
-    let strategiesRepository = RepositoryInjection.provideStrategyRepository()
-    let queriesRepository = RepositoryInjection.provideQueryRepository()
-    let userRepository = RepositoryInjection.provideUserRepository()
-    
     var errorHandler: ErrorHandlerController?
     var keyboardWillShowObserver: AnyObject?
     var keyboardWillHideObserver: AnyObject?
