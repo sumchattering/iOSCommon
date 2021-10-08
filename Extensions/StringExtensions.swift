@@ -13,7 +13,6 @@ extension String {
         
         if hasSuffixCaseInsensitive(suffix) {
             resultString = resultString.dropLast(suffix.count).description
-            print("\(resultString)")
         }
         
         return resultString
