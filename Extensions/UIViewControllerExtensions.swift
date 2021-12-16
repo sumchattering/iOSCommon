@@ -19,5 +19,20 @@ extension UIViewController {
         }
         return viewControllers[myIndex - 1]
     }
+    
+    func addFullScreenChildViewController(viewController: UIViewController, parentView: UIView? = nil) {
+        
+        var parentView = parentView
+        if (parentView == nil) {
+            parentView = self.view
+        }
+        
+        guard let parentView = parentView else {
+            return
+        }
+        
+        addChild(viewController)
+        parentView.addFullScreenSubview(view: viewController.view)
+    }
 
 }
